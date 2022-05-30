@@ -1,0 +1,1 @@
+# XDG-compliant config files
