@@ -1,6 +1,6 @@
 source $DOTS/scripts/logger.sh
 
-source $DOTS/scripts/command-check.sh
+source $DOTS/scripts/command-exists.sh
 source $DOTS/scripts/path-check.sh
 
 source $DOTS/scripts/prepare.sh
