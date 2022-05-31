@@ -18,6 +18,8 @@ dots_func_log "[env] loaded DOTS_DATA $DOTS_DATA"
 dots_func_log "[env] loaded DOTS_CACHE $DOTS_CACHE"
 dots_func_newline
 
+source $DOTS/dots/aliases.sh
 source $DOTS/dots/rust.sh
 source $DOTS/dots/cargo.sh
+source $DOTS/dots/nvm.sh
 # TODO: vim, tmux, nvm
