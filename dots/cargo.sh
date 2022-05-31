@@ -11,10 +11,22 @@ if command_exists cargo; then
     fi
 
 
-    if ! command_exists starship; then
+    if ! command_exists lsd; then
         dots_func_log "[cargo:lsd] installing lsd..."
         cargo install lsd
         dots_func_log "[cargo:lsd] lsd installed"
+    fi
+
+    if ! command_exists tig; then
+        dots_func_log "[cargo:tig] installing tig..."
+        cargo install tig
+        dots_func_log "[cargo:tig] tig installed"
+    fi
+
+    if ! command_exists fd-find; then
+        dots_func_log "[cargo:fd-find] installing fd-find..."
+        cargo install fd-find
+        dots_func_log "[cargo:fd-find] fd-find installed"
     fi
 
     # TODO: more
