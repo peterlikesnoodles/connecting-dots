@@ -23,7 +23,7 @@ if command_exists cargo; then
         dots_func_log "[cargo:tig] tig installed"
     fi
 
-    if ! command_exists fd-find; then
+    if ! command_exists fd; then
         dots_func_log "[cargo:fd-find] installing fd-find..."
         cargo install fd-find
         dots_func_log "[cargo:fd-find] fd-find installed"
