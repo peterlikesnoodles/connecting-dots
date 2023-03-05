@@ -2,13 +2,6 @@
 # Rust
 ################################################################################
 
-# auto install
-if ! command_exists rustup; then
-    dots_func_log "[rust] rustup not found"
-    dots_func_log "[rust] installing rustup"
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-    dots_func_log "[rust] installed"
-fi
 
 # RUSTUP_HOME sets the root rustup folder, which is used for storing installed
 # toolchains and configuration options.
@@ -23,6 +16,14 @@ prepare_dir "$CARGO_HOME"
 
 export PATH="$PATH":"$CARGO_HOME/bin"
 dots_func_log "[rust] added $CARGO_HOME/bin to path"
+
+# auto install
+if ! command_exists rustup; then
+    dots_func_log "[rust] rustup not found"
+    dots_func_log "[rust] installing rustup"
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    dots_func_log "[rust] installed"
+fi
 
 dots_func_log "[rust] setup complete."
 dots_func_newline

@@ -1,0 +1,38 @@
+" ref: https://tlvince.com/vim-respect-xdg
+" -----> Environment that makes vim respect XDG
+" 这个 $DOTS_CACHE/vim/ 文件夹要存在才行。
+" 双 // 的话，生成的 swp 文件是这样的：%Users%sey%coffee%sey%note%README.md.swp
+" （这里 coffee 是一个神奇的路径）
+" 就可以区分不同的文件
+set directory=$DTOS_CACHE/vim//,~/,/tmp " .swp 文件路径配置
+set backupdir=$DOTS_CACHE/vim//,~/,/tmp " .bak 文件路径设置
+set viminfo+=n$DOTS_CACHE/vim/viminfo " history 和 search items 保存位置
+" runtime directory (default to ~/.vim)
+set runtimepath=$DOTS/config/vim,$DOTS/config/vim/after,$VIM,$VIMRUNTIME
+let $MYVIMRC="$DOTS/config/vim/vimrc"
+let $MYVIMDIR="$DOTS/config/vim"
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 缩进 indentation
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+:source $MYVIMDIR/indent.vim
+
+:source $MYVIMDIR/basics.vim
+
+:source $MYVIMDIR/vundle_config.vim
+:source $MYVIMDIR/vundle.vim
+:source $MYVIMDIR/plugin_config.vim
+
+:source $MYVIMDIR/set_colors.vim
+
+:source $MYVIMDIR/set_indentation.vim
+
+:source $MYVIMDIR/hop.vim
+"  :source $MYVIMDIR/hop.lua
+
+
+set colorcolumn=+1,80
+"set cursorline
+":highlight ColorColumn ctermbg=238 guibg=#444444
+":highlight CursorLine ctermbg=238 guibg=#444444

@@ -4,12 +4,21 @@
 if command_exists cargo; then
     dots_func_log "[cargo] start installing apps with cargo..."
 
-    if ! command_exists starship; then
-        dots_func_log "[cargo:starship] installing starship..."
-        cargo install starship
-        dots_func_log "[cargo:starship] starship installed"
-    fi
+    # INFO: MacOS is missing cmake to install starship
+    # INFO: brew install cmake, then cargo install starship fails with error
+    # INFO: cargo install cmake installs no binary
+    # INFO: will use brew install starship for the moment i
+    # if ! command_exists cmake; then
+    #     dots_func_log "[cargo:cmake] installing cmake..."
+    #     cargo install cmake
+    #     dots_func_log "[cargo:cmake] cmake installed"
+    # fi
 
+    # if ! command_exists starship; then
+    #     dots_func_log "[cargo:starship] installing starship..."
+    #     cargo install starship
+    #     dots_func_log "[cargo:starship] starship installed"
+    # fi
 
     if ! command_exists lsd; then
         dots_func_log "[cargo:lsd] installing lsd..."
@@ -17,16 +26,23 @@ if command_exists cargo; then
         dots_func_log "[cargo:lsd] lsd installed"
     fi
 
-    if ! command_exists tig; then
-        dots_func_log "[cargo:tig] installing tig..."
-        cargo install tig
-        dots_func_log "[cargo:tig] tig installed"
-    fi
+    # Who could know tig in cargo is a HelloWorld?
+    #if ! command_exists tig; then
+    #    dots_func_log "[cargo:tig] installing tig..."
+    #    cargo install tig
+    #    dots_func_log "[cargo:tig] tig installed"
+    #fi
 
     if ! command_exists fd; then
         dots_func_log "[cargo:fd-find] installing fd-find..."
         cargo install fd-find
         dots_func_log "[cargo:fd-find] fd-find installed"
+    fi
+
+    if ! command_exists bat; then
+        dots_func_log "[cargo:bat] installing bat..."
+        cargo install bat
+        dots_func_log "[cargo:bat] bat installed"
     fi
 
     # TODO: more
