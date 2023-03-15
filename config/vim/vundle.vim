@@ -31,8 +31,8 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin 'styled-components/vim-styled-components'
 
 " efficiency
-" Plugin 'scrooloose/nerdcommenter'
-" Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-fugitive'
 
 " color schemes
 " Plugin 'morhetz/gruvbox'
@@ -52,7 +52,7 @@ Plugin 'rakr/vim-one'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'vim-airline/vim-airline'
-" Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 " auto complete
 " YouCompleteMe 要求使用 Python, 但是 MacOS 的 Vim 对 Python 的支持是狗屎
 " 所以你需要安装 macvim (brew install 一下).
@@ -60,10 +60,8 @@ Plugin 'vim-airline/vim-airline'
 " ./install.py --all
 " 上面 --all 会包含 Go, Rust, JS/TS, etc.
 " Plugin 'ycm-core/YouCompleteMe'
-Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
-Plugin 'preservim/nerdcommenter'
 Plugin 'phaazon/hop.nvim'
 " Plugin 'vim-syntastic/syntastic'
 " Plugin 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install'}
@@ -95,5 +93,3 @@ colorscheme one
 hi Normal guibg=NONE ctermbg=NONE
 
 highlight Pmenu ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#000000
-
-

@@ -9,6 +9,11 @@ if command_exists git; then
         git config --global alias.co checkout
     fi
 
+    if [[ ! -n $(git config --global alias.la) ]]; then
+        dots_func_log "[git] git alias.la does not exist, aliasing..."
+        git config --global alias.la "pull --prune"
+    fi
+
     if [[ ! -n $(git config --global alias.pp) ]]; then
         dots_func_log "[git] git alias.pp does not exist, aliasing..."
         git config --global alias.pp "pull --prune"
