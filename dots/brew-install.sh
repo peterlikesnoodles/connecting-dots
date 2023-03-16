@@ -2,6 +2,10 @@ if [ "$(uname)"=="Darwin" ]; then
     dots_func_log "[OS] host OS is Darwin(macOS)"
     dots_func_newline
 
+    if [ $(path_exists /opt/homebrew/bin/brew) -eq 0 ]; then
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+    fi
+
     if command_exists brew; then
         dots_func_log "[brew] brew available"
         dots_func_log "[brew] start installing apps with brew"
