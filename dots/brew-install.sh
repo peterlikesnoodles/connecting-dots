@@ -32,7 +32,12 @@ if [ "$(uname)"=="Darwin" ]; then
             dots_func_log "[tig] start installing tig"
             brew install tig
             dots_func_log "[tig] tig installation complete"
-            dots_func_newline
+        fi
+
+        if ! command_exists tree; then
+            dots_func_log "[tree] start installing tree"
+            brew install tree
+            dots_func_log "[tree] tree installation complete"
         fi
 
         if ! command_exists ag; then

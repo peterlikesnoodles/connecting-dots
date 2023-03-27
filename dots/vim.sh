@@ -17,3 +17,11 @@ prepare_dir $DOTS_DATA/vim/nerdtreebookmarks
 
 # install all vim plugins from cli
 # command_exists vim && vim +PluginInstall +qall
+
+if [[ ! -f $HOME/.ideavimrc ]]; then
+    dots_func_log "[tmux] ~/.tmux.conf not found"
+    dots_func_log "[tmux] creating soft link $/.tmux.conf"
+    ln -s $DOTS/config/vim/ideavimrc.vim $HOME/.ideavimrc
+    dots_func_log "[tmux] soft link $/.tmux.conf created"
+    dots_func_newline
+fi

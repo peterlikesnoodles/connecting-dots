@@ -22,8 +22,10 @@ source $DOTS/dots/common.sh
 source $DOTS/dots/aliases.sh
 source $DOTS/dots/git.sh
 source $DOTS/dots/rust.sh
-source $DOTS/dots/cargo.sh
 source $DOTS/dots/brew-install.sh
+source $DOTS/dots/cargo.sh
+
+source $DOTS/dots/scripts.sh
 
 source $DOTS/dots/nvm.sh
 source $DOTS/dots/vim.sh
