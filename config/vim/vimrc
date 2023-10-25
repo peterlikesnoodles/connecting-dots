@@ -4,7 +4,7 @@
 " 双 // 的话，生成的 swp 文件是这样的：%Users%sey%coffee%sey%note%README.md.swp
 " （这里 coffee 是一个神奇的路径）
 " 就可以区分不同的文件
-set directory=$DTOS_CACHE/vim//,~/,/tmp " .swp 文件路径配置
+set directory=$DOTS_CACHE/vim//,~/,/tmp " .swp 文件路径配置
 set backupdir=$DOTS_CACHE/vim//,~/,/tmp " .bak 文件路径设置
 set viminfo+=n$DOTS_CACHE/vim/viminfo " history 和 search items 保存位置
 " runtime directory (default to ~/.vim)

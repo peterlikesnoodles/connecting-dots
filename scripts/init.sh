@@ -19,6 +19,7 @@ dots_func_log "[env] loaded DOTS_CACHE $DOTS_CACHE"
 dots_func_newline
 
 source $DOTS/dots/common.sh
+source $DOTS/dots/zsh.sh
 source $DOTS/dots/aliases.sh
 source $DOTS/dots/git.sh
 source $DOTS/dots/rust.sh
