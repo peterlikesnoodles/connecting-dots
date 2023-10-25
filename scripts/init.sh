@@ -31,3 +31,4 @@ source $DOTS/dots/nvm.sh
 source $DOTS/dots/vim.sh
 source $DOTS/dots/tmux.sh
 source $DOTS/dots/sdk.sh
+source $DOTS/dots/curl.sh
